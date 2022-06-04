@@ -112,13 +112,13 @@ namespace EstructuraDeDatos2
 					personaLista.Add(marca, p);
 					VerPersona();
 					VerPersonaDiccionario();
-					Console.WriteLine("\n Persona con Nombre *" + marca + "* agregado exitósamente");
+					Console.WriteLine("\n Auto con Nombre *" + marca + "* agregado exitósamente");
 					Validador.VolverMenu();
 				}
 				else
 				{
 					VerPersona();
-					Console.WriteLine("\n Como puede verificar no se creo ninguna Persona");
+					Console.WriteLine("\n Como puede verificar no se creo ningún Auto");
 					Validador.VolverMenu();
 
 				}
@@ -128,7 +128,7 @@ namespace EstructuraDeDatos2
 			{
 				VerPersona();
 				Console.WriteLine("\n Usted digitó la marca *" + marca + "*");
-				Console.WriteLine("\n Ya existe un auto con esa marca");
+				Console.WriteLine("\n Ya existe un Auto con esa marca");
 				Console.WriteLine("\n Será direccionado nuevamente al Menú para que lo realice correctamente");
 				Validador.VolverMenu();
 
@@ -164,7 +164,7 @@ namespace EstructuraDeDatos2
 				}
 			}
 			VerPersona();
-			Console.WriteLine("Se ha grabado los datos de las personas en la Agenda correctamente");
+			Console.WriteLine("Se ha grabado los datos de los Autos correctamente");
 			Validador.VolverMenu();
 
 		}
@@ -172,7 +172,7 @@ namespace EstructuraDeDatos2
 		protected override void LeerAuto()
 		{
 			Console.Clear();
-			Console.WriteLine("\n Personas en la agenda: ");
+			Console.WriteLine("\nAutos: ");
 			using (var archivoLista = new FileStream("archivoLista.txt", FileMode.Open))
 			{
 				using (var archivoLecturaAgenda = new StreamReader(archivoLista))
@@ -270,7 +270,7 @@ namespace EstructuraDeDatos2
 		public void VerPersona()
 		{
 			Console.Clear();
-			Console.WriteLine("\n Personas en Agenda");
+			Console.WriteLine("\n Autos");
 			Console.WriteLine(" #\t\tMarca.\t\tModelo.\t\tAño.");
 			for (int i = 0; i < Auto.Count; i++)
 			{
